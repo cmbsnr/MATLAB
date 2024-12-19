@@ -1,4 +1,4 @@
-function [lambda, xFcn, yFcn, zFcn] = colorMatchFcn(formulary)
+function cmf = colorMatchFcn(formulary)
 %colorMatchFcn  Popular color matching functions.
 %
 %    [LAMBDA, XFCN, YFCN, ZFCN] = colorMatchFcn(FORMULARY) returns the
@@ -1466,7 +1466,3 @@ switch (lower(formulary))
               'Unrecognized color match function.')
           
 end
-lambda = cmf(:, 1)';
-xFcn = cmf(:, 2)';
-yFcn = cmf(:, 3)';
-zFcn = cmf(:, 4)';

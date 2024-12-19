@@ -14,5 +14,22 @@ cie = colorMatchFcn('1931_full');
 XYZ = R*cie(:,2:4);
 xyz_norm = normalize(XYZ,2,'norm',1);
 rgb = xyz2rgb(xyz_norm);
-C = reshape(rgb,[1,1000,3]) .* ones(100,1000,3);
-image(C)
+subplot(2,3,1)
+plot(xyz_norm(:,1))
+title('x')
+subplot(2,3,2)
+plot(xyz_norm(:,2))
+title('y')
+subplot(2,3,3)
+plot(xyz_norm(:,3))
+title('z')
+subplot(2,3,4)
+plot(rgb(:,1))
+title('r')
+subplot(2,3,5)
+plot(rgb(:,2))
+title('g')
+subplot(2,3,6)
+plot(rgb(:,3))
+text(100,100,'100')
+title('b')
