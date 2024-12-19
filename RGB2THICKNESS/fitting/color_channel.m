@@ -3,6 +3,7 @@ clear
 test = imread("test.png");
 siz = size(test);
 test_xyz = rgb2xyz(test);
+test_hsv = rgb2hsv(test);
 r = ones(siz,"uint8");
 r(:,:,1) = test(:,:,1);
 g = ones(siz,"uint8");
@@ -29,3 +30,21 @@ title('g')
 subplot(4,4,13)
 image(test(:,:,3))
 title('b')
+subplot(4,4,6)
+imagesc(test_xyz(:,:,1))
+title('x')
+subplot(4,4,10)
+imagesc(test_xyz(:,:,2))
+title('y')
+subplot(4,4,14)
+imagesc(test_xyz(:,:,3))
+title('z')
+subplot(4,4,7)
+imagesc(test_hsv(:,:,1))
+title('h')
+subplot(4,4,11)
+imagesc(test_hsv(:,:,2))
+title('s')
+subplot(4,4,15)
+imagesc(test_hsv(:,:,3))
+title('v')
