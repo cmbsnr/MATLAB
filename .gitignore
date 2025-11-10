@@ -1,0 +1,10 @@
+# Windows:
+Desktop.ini
+
+# Mac:
+*.DS_Store
+
+# MATLAB
+*.mp4
+*.jpg
+*.png
